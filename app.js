@@ -28,7 +28,7 @@ const item = require('./models/item')
 const { addMinutes } = require("date-fns");
 
 mongoose.set('strictQuery', "false")
-const dev_db = 'mongodb+srv://admin:admin@cluster0.2up1wdk.mongodb.net/?retryWrites=true&w=majority'
+const dev_db = 'mongodb+srv://saedahmed5191:z4yU8vgJi8AWyGWM@cluster0.lopv7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 const mongoDB = dev_db || process.env.MONGODB_URI
 
 main().catch(err => console.log(err))
