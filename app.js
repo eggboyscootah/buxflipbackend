@@ -15,11 +15,11 @@ const { RateLimiterMemory } = require("rate-limiter-flexible");
 const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 
-const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
-const accountController = require("./controllers/accountController");
-const coinflip = require("./models/coinflip");
-const item = require("./models/item");
+const indexRouter = require("./routes/index.js");
+const usersRouter = require("./routes/users.js");
+const accountController = require("./controllers/accountController.js");
+const coinflip = require("./models/coinflip.js");
+const item = require("./models/item.js");
 
 // Environment Variables
 dotenv.config();
@@ -75,7 +75,7 @@ const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
   cors: {
     origin: "*",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "OPTIONS"],
   },
 });
 

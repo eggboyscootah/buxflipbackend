@@ -1,10 +1,10 @@
 const crypto = require('crypto');
 const asyncHandler = require('express-async-handler')
 const { validationResult, body } = require('express-validator')
-const Coinflip = require('../models/coinflip')
-const Account = require('../models/account')
+const Coinflip = require('../models/coinflip.js')
+const Account = require('../models/account.js')
 const mongoose = require('mongoose');
-const Item = require('../models/item');
+const Item = require('../models/item.js');
 
 exports.create_coinflip = [
     body("value")

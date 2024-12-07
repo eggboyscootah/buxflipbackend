@@ -1,6 +1,6 @@
 const asyncHandler = require('express-async-handler')
 const { validationResult, body } = require('express-validator')
-const Account = require('../models/account')
+const Account = require('../models/account.js')
 const bcrypt = require('bcryptjs')
 const debug = require('debug')
 const jwt = require('jsonwebtoken')

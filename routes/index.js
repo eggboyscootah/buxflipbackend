@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const accountController = require('../controllers/accountController');
-const coinflipController = require('../controllers/coinflipController')
+const accountController = require('../controllers/accountController.js');
+const coinflipController = require('../controllers/coinflipController.js')
 const expressQueue = require('express-queue');
 const queueMw = expressQueue({ activeLimit: 1, queuedLimit: -1 });
 
